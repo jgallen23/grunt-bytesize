@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('bytesize', 'Your task description goes here.', function() {
 
-    var done = this.async();
+    var done = grunt.util._.after(this.files.length, this.async());
 
     // Iterate over all specified file groups.
     this.files.forEach(function(f) {
